@@ -1,0 +1,9 @@
+[submodule "vim-pathogen"]
+	path = vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "bundle/comments"]
+	path = bundle/comments
+	url = git://github.com/h13ronim/vim-comments.git
+[submodule "bundle/pyflakes"]
+	path = bundle/pyflakes
+	url = git://github.com/kevinw/pyflakes-vim.git
