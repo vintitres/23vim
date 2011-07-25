@@ -15,6 +15,7 @@ set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
+set scrolloff=5
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
@@ -125,7 +126,7 @@ if &t_Co > 2 || has("gui_running")
   " folding
   set foldcolumn=0
   set foldlevel=10000
-  set foldmethod=manual
+  set foldmethod=indent
   highlight Folded ctermbg=black ctermfg=blue
   highlight FoldColumn ctermbg=black ctermfg=darkgrey
 endif
@@ -166,8 +167,6 @@ set ignorecase smartcase
 
 "let mapleader = ","
 " set hidden
-hi clear SpellBad
-hi SpellBad ctermbg=blue
 set title
 set wildmenu
 set wildmode=list:longest,full
@@ -181,22 +180,29 @@ nmap <silent> <C-l> :ConqueTermVSplit bash<CR>
 imap <silent> <C-l> <Esc>:ConqueTermVSplit bash<CR>
 "nmap <silent> <C-w> :tabclose<CR>
 "imap <silent> <C-w> <Esc>:tabclose<CR>i
-highlight OverLength ctermbg=red ctermfg=white
-match OverLength /\%>79v.\+/
 set nobackup
 set nowritebackup
 set tags=.TAGS;$HOME
 nmap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 imap <C-\> <Esc>:tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
-" Remove Trailing Spaces in *.py files
-autocmd BufWritePre *.py :%s/\s\+$//e
-
-set scrolloff=5
-
-
+" Solarized theme
 syntax enable
 let g:solarized_termtrans=1
 let g:solarized_bold=0
 set background=dark
 colorscheme solarized
+
+" Error marking
+hi clear SpellBad
+hi SpellBad ctermbg=blue
+
+" Too long lines
+hi clear OverLength
+hi OverLength ctermbg=white ctermfg=red
+match OverLength /\%>79v.\+/
+set colorcolumn=80
+hi ColorColumn ctermfg=red
+
+" Remove Trailing Spaces in *.py files
+autocmd BufWritePre *.py :%s/\s\+$//e
