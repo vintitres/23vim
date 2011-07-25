@@ -34,8 +34,6 @@ set visualbell
 
 
 set hidden
-hi clear SpellBad
-hi SpellBad ctermbg=blue
 set title
 set wildmenu
 set wildmode=list:longest,full
@@ -46,9 +44,6 @@ imap <silent> <C-p> <Esc>:tabp<CR>i
 nmap <silent> <C-o> :tabnew<CR>
 imap <silent> <C-o> <Esc>:tabnew<CR>
 
-highlight OverLength ctermbg=red ctermfg=white
-match OverLength /\%>79v.\+/
-
 set tags=.TAGS;$HOME
 nmap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 imap <C-\> <Esc>:tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -58,3 +53,15 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 
 nnoremap ' `
 nnoremap ` '
+
+syntax enable
+let g:solarized_termtrans=1
+let g:solarized_bold=0
+set background=dark
+colorscheme solarized
+
+set colorcolumn=80
+highlight OverLength ctermbg=red ctermfg=white
+match OverLength /\%>79v.\+/
+hi clear SpellBad
+hi SpellBad ctermbg=blue
