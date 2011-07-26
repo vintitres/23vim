@@ -165,6 +165,12 @@ set ignorecase smartcase
 "nnoremap <silent> <C-n> :call SwitchToNextBuffer(1)<CR>
 "nnoremap <silent> <C-p> :call SwitchToNextBuffer(-1)<CR>
 
+" Faster window switching
+map <C-j> <C-W><C-J>
+map <C-k> <C-W><C-K>
+map <C-l> <C-W><C-L>
+map <C-h> <C-W><C-H>
+
 "let mapleader = ","
 " set hidden
 set title
@@ -176,8 +182,8 @@ nmap <silent> <C-p> :tabp<CR>
 imap <silent> <C-p> <Esc>:tabp<CR>i
 nmap <silent> <C-o> :tabnew<CR>
 imap <silent> <C-o> <Esc>:tabnew<CR>
-nmap <silent> <C-l> :ConqueTermVSplit bash<CR>
-imap <silent> <C-l> <Esc>:ConqueTermVSplit bash<CR>
+"nmap <silent> <C-l> :ConqueTermVSplit bash<CR>
+"imap <silent> <C-l> <Esc>:ConqueTermVSplit bash<CR>
 "nmap <silent> <C-w> :tabclose<CR>
 "imap <silent> <C-w> <Esc>:tabclose<CR>i
 set nobackup
@@ -192,6 +198,9 @@ let g:solarized_termtrans=1
 let g:solarized_bold=0
 set background=dark
 colorscheme solarized
+
+" Git branch show
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " Error marking
 hi clear SpellBad
