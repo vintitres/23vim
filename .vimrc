@@ -209,7 +209,7 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " Error marking
 hi clear SpellBad
-hi SpellBad ctermbg=blue
+hi SpellBad ctermbg=blue ctermfg=white
 
 " Too long lines
 hi clear OverLength
