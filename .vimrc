@@ -187,8 +187,8 @@ nmap <silent> <C-p> :tabp<CR>
 imap <silent> <C-p> <Esc>:tabp<CR>i
 nmap <silent> <C-o> :tabnew<CR>
 imap <silent> <C-o> <Esc>:tabnew<CR>
-"nmap <silent> <C-l> :ConqueTermVSplit bash<CR>
-"imap <silent> <C-l> <Esc>:ConqueTermVSplit bash<CR>
+nmap <silent> <C-a> :ConqueTermVSplit bash<CR>
+imap <silent> <C-a> <Esc>:ConqueTermVSplit bash<CR>
 "nmap <silent> <C-w> :tabclose<CR>
 "imap <silent> <C-w> <Esc>:tabclose<CR>i
 set nobackup

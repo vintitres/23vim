@@ -19,3 +19,6 @@
 [submodule "bundle/NERDtree"]
 	path = bundle/NERDtree
 	url = git://github.com/vim-scripts/The-NERD-tree.git
+[submodule "bundle/ConqueTerm"]
+	path = bundle/ConqueTerm
+	url = git://github.com/rosenfeld/conque-term.git
