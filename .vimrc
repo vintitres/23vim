@@ -17,9 +17,6 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set scrolloff=5
 
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
-
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
@@ -170,6 +167,14 @@ map <C-j> <C-W><C-J>
 map <C-k> <C-W><C-K>
 map <C-l> <C-W><C-L>
 map <C-h> <C-W><C-H>
+
+" Autocomplete
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+    \ "\<lt>C-n>" :
+    \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+    \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+    \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
 
 "let mapleader = ","
 " set hidden
