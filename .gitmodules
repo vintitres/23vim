@@ -22,3 +22,6 @@
 [submodule "bundle/ConqueTerm"]
 	path = bundle/ConqueTerm
 	url = git://github.com/rosenfeld/conque-term.git
+[submodule "bundle/sort-python-imports"]
+	path = bundle/sort-python-imports
+	url = git://github.com/vim-scripts/sort-python-imports.git
