@@ -93,17 +93,6 @@ map <Up> gk
 map <Down> gj
 set whichwrap=<,>,[,],b,s
 
-" save / close 
-map <F2> :w<CR>
-imap <F2> <ESC><F2>a
-map <F10> :q<CR>
-imap <F10> <ESC><F10>a
-
-" default comment/uncomment
-map <C-D> :s@^[[:space:]]*@&#@g<CR>:nohls<CR>
-map <C-U> :s@^\([[:space:]]*\)#@\1@g<CR>:nohls<CR>
-
-
 set fileencodings=utf-8,latin2
 "set encoding=utf-8
 
