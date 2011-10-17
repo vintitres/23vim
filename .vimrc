@@ -205,7 +205,11 @@ hi clear OverLength
 hi OverLength ctermbg=white ctermfg=red
 match OverLength /\%>79v.\+/
 set colorcolumn=80
-hi ColorColumn ctermfg=red
+hi ColorColumn ctermfg=white
 
-" Remove Trailing Spaces in *.py files
+" Remove Trailing Spaces in files
+autocmd BufWritePre *.cc :%s/\s\+$//e
+autocmd BufWritePre *.cpp :%s/\s\+$//e
+autocmd BufWritePre *.h :%s/\s\+$//e
 autocmd BufWritePre *.py :%s/\s\+$//e
+autocmd BufWritePre *.html :%s/\s\+$//e
