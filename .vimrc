@@ -201,11 +201,8 @@ hi clear SpellBad
 hi SpellBad ctermbg=blue ctermfg=white
 
 " Too long lines
-hi clear OverLength
-hi OverLength ctermbg=white ctermfg=red
-match OverLength /\%>79v.\+/
-set colorcolumn=80
-hi ColorColumn ctermfg=white
+set colorcolumn=80,81
+hi ColorColumn ctermfg=red
 
 " Remove Trailing Spaces in files
 autocmd BufWritePre *.cc :%s/\s\+$//e
