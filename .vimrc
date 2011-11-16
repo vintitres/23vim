@@ -210,3 +210,7 @@ autocmd BufWritePre *.cpp :%s/\s\+$//e
 autocmd BufWritePre *.h :%s/\s\+$//e
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
+
+
+set shell=bash\ --login
+
