@@ -16,18 +16,9 @@
 [submodule "bundle/NERDtree"]
 	path = bundle/NERDtree
 	url = git://github.com/vim-scripts/The-NERD-tree.git
-[submodule "bundle/ConqueTerm"]
-	path = bundle/ConqueTerm
-	url = git://github.com/rosenfeld/conque-term.git
-[submodule "bundle/pep8"]
-	path = bundle/pep8
-	url = git://github.com/nvie/vim-pep8.git
 [submodule "bundle/gitv"]
 	path = bundle/gitv
 	url = git://github.com/gregsexton/gitv.git
-[submodule "bundle/jslint"]
-	path = bundle/jslint
-	url = https://github.com/hallettj/jslint.vim.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
