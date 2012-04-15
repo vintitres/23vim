@@ -11,6 +11,8 @@ if has("vms")
 else
   set backup		" keep a backup file
 endif
+
+set laststatus=2
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -214,3 +216,7 @@ autocmd BufWritePre *.html :%s/\s\+$//e
 
 set shell=bash\ --login
 
+set t_Co=256
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_colorscheme='skwp'
+let g:Powerline_theme='skwp'
