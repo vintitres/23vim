@@ -167,6 +167,7 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
     \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 imap <C-@> <C-Space>
 
+
 "let mapleader = ","
 " set hidden
 set title
@@ -204,6 +205,7 @@ hi SpellBad ctermbg=blue ctermfg=white
 
 " Too long lines
 set colorcolumn=80,81
+"set tw=80
 hi ColorColumn ctermfg=red
 
 " Remove Trailing Spaces in files
@@ -212,6 +214,8 @@ autocmd BufWritePre *.cpp :%s/\s\+$//e
 autocmd BufWritePre *.h :%s/\s\+$//e
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
+autocmd BufWritePre *.css :%s/\s\+$//e
+autocmd BufWritePre *.svg :%s/\s\+$//e
 
 
 set shell=bash\ --login
@@ -220,3 +224,6 @@ set t_Co=256
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme='skwp'
 let g:Powerline_theme='skwp'
+
+
+cmap w!! %!sudo tee > /dev/null %
