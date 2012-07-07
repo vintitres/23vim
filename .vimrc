@@ -226,4 +226,4 @@ let g:Powerline_colorscheme='skwp'
 let g:Powerline_theme='skwp'
 
 
-cmap w!! %!sudo tee > /dev/null %
+cmap w!! w! !sudo tee % >/dev/null<CR>:e!<CR><CR>
