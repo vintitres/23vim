@@ -1,7 +1,49 @@
-set nocompatible
+set nocompatible  " be iMproved
 
-" Pathogen
-call pathogen#infect()                                                          
+""""""""""
+" Vundle "
+""""""""""
+filetype off  " required
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" NOTE: comments after Bundle command are not allowed..
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" Bundles:
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/syntastic'
+Bundle 'skwp/vim-colors-solarized'
+Bundle 'sjl/gundo.vim'
+Bundle 'The-NERD-tree'
+Bundle 'comments.vim'
+
+Bundle 'hynek/vim-python-pep8-indent'
+Bundle 'iynaix/django.vim'
+"Bundle 'sjl/dotfiles', {'rtp': 'vim/bundle/django-custom'}
+
+" To check:
+"Bundle 'wincent/Command-T'
+"Bundle 'rstacruz/sparkup'
+"Bundle 'FuzzyFinder'
+
+filetype plugin indent on     " required!
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+
+
+
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -196,9 +238,6 @@ let g:solarized_bold=0
 set background=dark
 colorscheme solarized
 
-" Git branch show
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-
 " Error marking
 hi clear SpellBad
 hi SpellBad ctermbg=blue ctermfg=white
@@ -206,7 +245,7 @@ hi SpellBad ctermbg=blue ctermfg=white
 " Too long lines
 set colorcolumn=80,81
 "set tw=80
-hi ColorColumn ctermfg=red
+"hi ColorColumn ctermfg=blue
 
 " Remove Trailing Spaces in files
 autocmd BufWritePre *.cc :%s/\s\+$//e
@@ -218,12 +257,12 @@ autocmd BufWritePre *.css :%s/\s\+$//e
 autocmd BufWritePre *.svg :%s/\s\+$//e
 
 
-set shell=bash\ --login
+"set shell=bash\ --login
 
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
-let g:Powerline_colorscheme='skwp'
-let g:Powerline_theme='skwp'
+let g:Powerline_colorscheme = 'solarized256'
+"let g:Powerline_theme = 'solarized256'
 
 
 "cmap w!! w! !sudo tee % >/dev/null<CR>:e!<CR><CR>
