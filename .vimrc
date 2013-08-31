@@ -208,6 +208,11 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
     \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
     \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 imap <C-@> <C-Space>
+"Ptyhon problems
+autocmd FileType python set omnifunc=
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 
 "let mapleader = ","
