@@ -27,6 +27,9 @@ Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'iynaix/django.vim'
 "Bundle 'sjl/dotfiles', {'rtp': 'vim/bundle/django-custom'}
 
+Bundle 'promela.vim'
+Bundle 'petRUShka/vim-opencl'
+
 " To check:
 "Bundle 'wincent/Command-T'
 "Bundle 'rstacruz/sparkup'
@@ -140,17 +143,9 @@ set whichwrap=<,>,[,],b,s
 set fileencodings=utf-8,latin2
 "set encoding=utf-8
 
-set tabstop=4 " every tab is 8-spaces long
+set tabstop=2
 
-" indentation is always 4-spaces long and tabs are used
-set shiftwidth=4 softtabstop=4 expandtab
-
-" gT C++ environment
-"set shiftwidth=8 softtabstop=8 noexpandtab
-
-" SMK C++ environment
-" indentation is always 4-spaces long and tabs are used
-
+set shiftwidth=2 softtabstop=2 expandtab
 
 if &t_Co > 2 || has("gui_running")
   " folding
