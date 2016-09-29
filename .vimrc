@@ -1,5 +1,7 @@
 set nocompatible  " be iMproved
 
+set shell=bash
+
 """"""""""
 " Vundle "
 """"""""""
@@ -22,13 +24,14 @@ Bundle 'skwp/vim-colors-solarized'
 Bundle 'sjl/gundo.vim'
 Bundle 'The-NERD-tree'
 Bundle 'comments.vim'
+Bundle 'christoomey/vim-tmux-navigator'
 
 Bundle 'hynek/vim-python-pep8-indent'
-Bundle 'iynaix/django.vim'
+"Bundle 'iynaix/django.vim'
 "Bundle 'sjl/dotfiles', {'rtp': 'vim/bundle/django-custom'}
 
-Bundle 'promela.vim'
-Bundle 'petRUShka/vim-opencl'
+"Bundle 'promela.vim'
+"Bundle 'petRUShka/vim-opencl'
 
 " To check:
 "Bundle 'wincent/Command-T'
@@ -191,10 +194,10 @@ set ignorecase smartcase
 "nnoremap <silent> <C-p> :call SwitchToNextBuffer(-1)<CR>
 
 " Faster window switching
-map <C-j> <C-W><C-J>
-map <C-k> <C-W><C-K>
-map <C-l> <C-W><C-L>
-map <C-h> <C-W><C-H>
+"map <C-j> <C-W><C-J>
+"map <C-k> <C-W><C-K>
+"map <C-l> <C-W><C-L>
+"map <C-h> <C-W><C-H>
 
 " Autocomplete
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
